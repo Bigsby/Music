@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test VexFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <script src="osmd.min.js"></script>
+</head>
+
+<body>
+    <div id="scoreContainer"></div>
+    <script>
+        var osmd = new opensheetmusicdisplay.OSMD("scoreContainer");
+        osmd.load("BeautifulLove.xml").then(
+            function () {
+                alert("rendering...");
+                osmd.render();
+            }
+        );
+    </script>
+    <!--<select id="selectScore">
+        <option value="TakeATrain.xml" selected>Take The 'A' Train</option>
+        <option value="BeautifulLove.xml">Beautiful Love</option>
+        <option selected value="WhenSunnyGetsBlue.xml">When Sunny Gets Blue</option>
+    </select>
+    <div id="container">
+        <h1 id="title"></h1>
+        <span id="composer"></span>
+        <div id="score"></div>
+    </div>
+    <script src="readMusicXml.js"></script>-->
+</body>
+
+</html>
