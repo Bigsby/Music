@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   //  "./app.component.scss"
   ]
 })
-export class AppComponent {
+export class TheoryAppComponent {
 }
