@@ -1,9 +1,0 @@
-[submodule "musicxml"]
-	path = musicxml
-	url = https://github.com/w3c/musicxml.git
-[submodule "mnx"]
-	path = mnx
-	url = https://github.com/w3c/mnx.git
-[submodule "music-encoding"]
-	path = music-encoding
-	url = https://github.com/music-encoding/music-encoding.git
