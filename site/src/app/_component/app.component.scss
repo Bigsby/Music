@@ -1,5 +1,29 @@
-$color:#000010;
+@import "./../../styles/colors.scss";
+:host {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
-:host{
-    color:$color;
+header,
+footer {
+    background-color: $primary-color;
+    color: $background-color;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+header {
+    font-size: 2em;
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+div#content {
+    flex-grow: 1;
+    padding: 1em;
+    overflow-y: auto;
 }
