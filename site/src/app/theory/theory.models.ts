@@ -7,6 +7,7 @@ export class Topic {
 }
 
 export class TopicContent {
+    title: string;
     items: TopicContentItem[];
 }
 

@@ -1,0 +1,13 @@
+{
+    "title": "Nature",
+    "items": [
+        {
+            "type": "text",
+            "content": "This is the text content"
+        },
+        {
+            "type": "youTube",
+            "content": "This is the YouTube Content"
+        }
+    ]
+}
