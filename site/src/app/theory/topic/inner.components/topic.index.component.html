@@ -1,0 +1,8 @@
+<ol>
+    <li *ngFor="let subTopic of topic.subTopics;">
+        <div class="link" [routerLink]="[ './../' + subTopic.id ]">{{subTopic.name}}</div>
+        <ol>
+            <topic-index [topic]="subTopic"></topic-index>
+        </ol>
+    </li>
+</ol>

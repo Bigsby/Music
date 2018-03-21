@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { ILogger, IDataService } from "./../../_common/common.interfaces";
+import { ILogger } from "./../../_common/common.interfaces";
 
+import { TheoryService } from "./../theory.service";
 import { Topic } from "./../theory.models";
 
 @Component({
@@ -12,13 +13,13 @@ import { Topic } from "./../theory.models";
 export class IndexComponent implements OnInit {
     topics: Topic[];
     ngOnInit(): void {
-        this.dataService.getList(Topic)
+        this.theoryService.getTopics()
             .then(result => this.topics = result);
     }
 
     constructor(
         private logger: ILogger,
-        private dataService: IDataService) {
+        private theoryService: TheoryService) {
         this.logger = logger.forContext(IndexComponent);
 
         this.logger.log("me here!");

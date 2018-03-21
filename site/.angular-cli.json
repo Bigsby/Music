@@ -9,6 +9,7 @@
       "outDir": "./../docs",
       "assets": [
         "data",
+        "images",
         "favicon.ico",
         "CNAME",
         "404.html"

@@ -9,31 +9,30 @@ export class NotFoundComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.activeRoute.queryParams.subscribe(params => {
-            let path = decodeURI(params.path || "");
-            let queryParams = decodeURI(params.query || "");
+        let params = this.activeRoute.snapshot.params;
+        let path = decodeURI(params.path || "");
+        let queryParams = decodeURI(params.query || "");
 
-            if (!path) {
-                this.router.navigate([""]);
-            } else {
-                let pathParts = decodeURI(path).split("/");
+        if (!path) {
+            this.router.navigate([""]);
+        } else {
+            let pathParts = decodeURI(path).split("/");
 
-                let extras: NavigationExtras = {
-                    queryParams: {}
-                };
+            let extras: NavigationExtras = {
+                queryParams: {}
+            };
 
-                if (queryParams) {
-                    queryParams.split("&").forEach(p => {
-                        var pair = p.split("=");
-                        extras.queryParams[pair[0]] = pair[1];
-                    });
-                }
-
-                let routePath = pathParts[0];
-                let routeRemain = pathParts.splice(1);
-                routeRemain.unshift("/" + routePath);
-                this.router.navigate(routeRemain, extras);
+            if (queryParams) {
+                queryParams.split("&").forEach(p => {
+                    var pair = p.split("=");
+                    extras.queryParams[pair[0]] = pair[1];
+                });
             }
-        });
+
+            let routePath = pathParts[0];
+            let routeRemain = pathParts.splice(1);
+            routeRemain.unshift("/" + routePath);
+            this.router.navigate(routeRemain, extras);
+        }
     }
 }

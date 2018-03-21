@@ -1,1 +1,1 @@
-<div class="topicContainer" [routerLink]="[ './topic', topic.id ]">{{index}}. {{topic?.name}}</div>
+<div [title]="topic.description" class="topicContainer" [routerLink]="[ './topic', topic.id ]">{{index+1}}. {{topic?.name}}</div>

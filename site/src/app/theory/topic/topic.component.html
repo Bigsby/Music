@@ -1,3 +1,10 @@
-here will be the topic component
-<h1>{{content?.title}}</h1>
-<div *ngFor="let item of content?.items">{{item.type}}-{{item.content}}</div>
+<topic-breadcrumb [topic]="content?.topic"></topic-breadcrumb>
+<h1>{{content?.topic?.name}}</h1>
+<p>{{content?.topic?.description}}</p>
+<div *ngFor="let item of content?.items" [ngSwitch]="item.type">
+    <topic-index *ngSwitchCase="'index'" [topic]="content.topic"></topic-index>
+    <div *ngSwitchCase="'text'">{{item.content}}</div>
+    <div *ngSwitchCase="'youTube'">youTube</div>
+    <div *ngSwitchCase="'didYouKnow'">didYouKnow</div>
+    <div *ngSwitchCase="'resource'">resource</div>
+</div>

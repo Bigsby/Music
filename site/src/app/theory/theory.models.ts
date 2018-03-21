@@ -3,12 +3,17 @@ import { DataServiceTypeMapping } from "./../_common/common.interfaces";
 export class Topic {
     id: string;
     name: string;
+    description: string;
+    index: number;
+    parent?: Topic;
     subTopics?: Topic[];
+    path: Topic[];
 }
 
 export class TopicContent {
+    topic?: Topic;
     title: string;
-    items: TopicContentItem[];
+    items?: TopicContentItem[];
 }
 
 export class TopicContentItem {
@@ -17,6 +22,7 @@ export class TopicContentItem {
 }
 
 export enum TopciContentItemType {
+    index,
     text,
     youTube,
     didYouKnow,

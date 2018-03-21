@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { MusicCommonModule } from "../_common/common.module";
 import { DataServiceOptions } from "./../_common/common.interfaces";
 import { DataTypeMappings } from "./theory.models";
+import { TheoryService } from "./theory.service";
 
 import { TheoryRoutingModule, RoutedComponents } from "./theory-routing.module";
 
@@ -23,6 +24,7 @@ export class TheoryDataServiceOptions extends DataServiceOptions {
         TheoryRoutingModule
     ],
     providers: [
+        TheoryService,
         {
             provide: DataServiceOptions,
             useClass: TheoryDataServiceOptions
