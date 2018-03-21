@@ -1,0 +1,5 @@
+<li>{{topic?.name}}
+    <ol *ngIf="topic?.subTopics">
+        <topic [topic]="subTopic" *ngFor="let subTopic of topic.subTopics"></topic>
+    </ol>
+</li>

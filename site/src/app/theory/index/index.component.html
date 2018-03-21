@@ -1,4 +1,4 @@
 <h1>Theory Index</h1>
 <ol>
-    <li *ngFor="let topic of topics">{{topic.name}}</li>
+    <topic [topic]="topic" *ngFor="let topic of topics"></topic>
 </ol>

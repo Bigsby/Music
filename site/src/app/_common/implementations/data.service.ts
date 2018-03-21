@@ -46,7 +46,7 @@ export class DataService implements IDataService {
             .toPromise()
             .then(response => response.json() as T[])
             .catch(error => {
-                this.logger.error("Error getting from " + path);
+                this.logger.error("Error getting from " + path + ":" + error);
                 return [];
             });
     }

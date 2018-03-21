@@ -8,7 +8,7 @@ import { DataTypeMappings } from "./theory.models";
 import { TheoryRoutingModule, RoutedComponents } from "./theory-routing.module";
 
 @Injectable()
-class TheoryDataServiceOptions extends DataServiceOptions {
+export class TheoryDataServiceOptions extends DataServiceOptions {
     basePath: string = "theory";
     mappings = DataTypeMappings;
 }

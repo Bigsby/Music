@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IndexComponent } from "./index/index.component";
+import { IndexComponent, IndexTopic } from "./index/index.component";
 
 const routes: Routes = [
     {
@@ -17,5 +17,6 @@ const routes: Routes = [
 export class TheoryRoutingModule { }
 
 export const RoutedComponents = [
-    IndexComponent
+    IndexComponent,
+    IndexTopic
 ]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { ILogger, IDataService } from "./../../_common/common.interfaces";
 
 import { Topic } from "./../theory.models";
@@ -23,4 +23,12 @@ export class IndexComponent implements OnInit {
 
         this.logger.log("me here!");
     }
+}
+
+@Component({
+    templateUrl: "./index-topic.component.html",
+    selector: "topic"
+})
+export class IndexTopic{
+    @Input()topic: Topic;
 }
