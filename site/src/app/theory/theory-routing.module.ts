@@ -2,11 +2,21 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IndexComponent, IndexTopic } from "./index/index.component";
+import { TopicComponent } from "./topic/topic.component";
 
 const routes: Routes = [
     {
-      path: '',
-      component: IndexComponent
+        path: "topic/:id",
+        component: TopicComponent
+    },
+    {
+        path: '',
+        component: IndexComponent
+    },
+    {
+        path: "**",
+        redirectTo: "theory",
+        pathMatch: "full"
     }
 ];
 
@@ -18,5 +28,6 @@ export class TheoryRoutingModule { }
 
 export const RoutedComponents = [
     IndexComponent,
-    IndexTopic
+    IndexTopic,
+    TopicComponent
 ]

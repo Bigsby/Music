@@ -11,7 +11,7 @@ const routes: Routes = [
     path: "notfound",
     component: NotFoundComponent
   },
-  { path: "",
+  { path: "**",
     redirectTo: "theory",
     pathMatch: "full"
   }

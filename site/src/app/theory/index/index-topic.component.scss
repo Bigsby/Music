@@ -1,0 +1,19 @@
+@import "./../../../styles/colors.scss";
+
+.topicContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary-color;
+    color: $quaternary-color;
+    height: 3em;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $tertiary-color;
+    }
+}

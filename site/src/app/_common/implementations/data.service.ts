@@ -13,7 +13,7 @@ export class DataService implements IDataService {
     constructor(private http: Http,
         private options: DataServiceOptions,
         private logger: ILogger
-        
+
     ) {
         this.logger = logger.forContext(DataService);
         this.processMappings();
@@ -21,16 +21,20 @@ export class DataService implements IDataService {
         this.fileExtension = options.fileExtension;
     }
 
-    getSingle<T extends { id: string }>(ctr: { new(): T, id: string }, id: string): Promise<T> {
+    getSingle<T>(ctr: { new(): T }, id: string): Promise<T> {
         let mapping = this.getMapping(ctr);
         if (!mapping) {
             this.logger.error("Unable to find mapping for: " + ctr["name"]);
             return new Promise(() => null);
         }
 
-        return this.getListFromPath<T>(mapping)
-            .then(list => list.find(item => item.id == id));
+        return this.getListFromPath<T>(mapping, id)
+            .catch(error => {
+                this.logger.error("Error getting item from " + mapping + " id '" + id + "':" + error);
+                return null;
+            });;
     }
+
     getList<T>(ctr: { new(): T }): Promise<T[]> {
         let mapping = this.getMapping(ctr);
         if (!mapping) {
@@ -38,17 +42,17 @@ export class DataService implements IDataService {
             return new Promise(() => []);
         }
 
-        return this.getListFromPath<T>(mapping);
+        return this.getListFromPath<T[]>(mapping)
+            .catch(error => {
+                this.logger.error("Error getting list from " + mapping + ":" + error);
+                return [];
+            });;
     }
 
-    private getListFromPath<T>(path: string): Promise<T[]> {
-        return this.http.get(this.basePath + path + this.fileExtension)
+    private getListFromPath<T>(path: string, file?: string): Promise<T> {
+        return this.http.get(this.basePath + path + (file || "") + this.fileExtension)
             .toPromise()
-            .then(response => response.json() as T[])
-            .catch(error => {
-                this.logger.error("Error getting from " + path + ":" + error);
-                return [];
-            });
+            .then(response => response.json() as T);
     }
 
     private getMapping<T>(ctr: { new(): T }) {

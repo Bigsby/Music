@@ -10,12 +10,12 @@ export abstract class ILogger {
 
 @Injectable()
 export abstract class IDataService {
-    abstract getSingle<T extends {id: string}>(ctr: {new(): T}, id: string): Promise<T>;
-    abstract getList<T>(ctr: {new(): T}): Promise<T[]>;
+    abstract getSingle<T>(ctr: { new(): T }, id: string): Promise<T>;
+    abstract getList<T>(ctr: { new(): T }): Promise<T[]>;
 }
 
 @Injectable()
-export abstract class DataServiceOptions{
+export abstract class DataServiceOptions {
     abstract basePath: string;
     abstract mappings: DataServiceTypeMapping;
     fileExtension: string = ".json";

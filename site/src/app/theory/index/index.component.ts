@@ -27,8 +27,12 @@ export class IndexComponent implements OnInit {
 
 @Component({
     templateUrl: "./index-topic.component.html",
+    styleUrls:[
+        "./index-topic.component.scss"
+    ],
     selector: "topic"
 })
 export class IndexTopic{
     @Input()topic: Topic;
+    @Input()index: number;
 }

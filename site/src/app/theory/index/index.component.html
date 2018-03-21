@@ -1,4 +1,4 @@
-<h1>Theory Index</h1>
-<ol>
-    <topic [topic]="topic" *ngFor="let topic of topics"></topic>
-</ol>
+<h1>Theory Topics</h1>
+<div class="topicsContainer">
+    <topic [topic]="topic" [index]="i" *ngFor="let topic of topics; let i = index"></topic>
+</div>
