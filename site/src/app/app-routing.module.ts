@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NotFoundComponent } from "./app.components/not-found.component";
 
 const routes: Routes = [
   {
     path: "theory",
     loadChildren: "./theory/theory.module#TheoryModule"
+  },
+  {
+    path: "notfound",
+    component: NotFoundComponent
   },
   { path: "",
     redirectTo: "theory",
@@ -18,4 +23,6 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = []
+export const RoutingComponents = [
+  NotFoundComponent
+]
