@@ -1,0 +1,216 @@
+[
+    {
+        "name": "Disclaimer"
+    },
+    {
+        "name": "Nature",
+        "subTopics": [
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Animals"
+            },
+            {
+                "name": "Language"
+            }
+        ]
+    },
+    {
+        "name": "Physics",
+        "subTopics": [
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Sound"
+            },
+            {
+                "name": "Frequencies"
+            },
+            {
+                "name": "Harmonics"
+            },
+            {
+                "name": "Intervals"
+            }
+        ]
+    },
+    {
+        "name": "Notation",
+        "subTopics": [
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Pentagram"
+            },
+            {
+                "name": "Symbols"
+            },
+            {
+                "name": "Duration"
+            },
+            {
+                "name": "Time Signature"
+            },
+            {
+                "name": "Clefs"
+            },
+            {
+                "name": "Accidentals"
+            },
+            {
+                "name": "Letter Notation"
+            }
+        ]
+    },
+    {
+        "name": "Scales",
+        "subTopics": [
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Chromatic Scale"
+            },
+            {
+                "name": "Major Scale"
+            },
+            {
+                "name": "Key Signatures"
+            },
+            {
+                "name": "Altered Scales",
+                "subTopics": [
+                    {
+                        "name": "Harmonic Scale"
+                    },
+                    {
+                        "name": "Melodic Scale"
+                    },
+                    {
+                        "name": "Pentatonic Scale"
+                    },
+                    {
+                        "name": "Be-bop Scale"
+                    },
+                    {
+                        "name": "Diminished Scale"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Chords",
+        "subTopics": [
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Naming"
+            },
+            {
+                "name": "Harmonic Fields",
+                "subTopics": [
+                    {
+                        "name": "Introduction"
+                    },
+                    {
+                        "name": "Major Scale"
+                    },
+                    {
+                        "name": "Harmonic Scale"
+                    },
+                    {
+                        "name": "Melodic Scale"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Inversions",
+        "subTopics":[
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Chords"
+            },
+            {
+                "name": "Scales",
+                "subTopics":[
+                    {
+                        "name": "Major Scale - Greek Modes"
+                    },
+                    {
+                        "name": "Harmonic Scale"
+                    },
+                    {
+                        "name": "Melodic Scale"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Harmonic Function & Rhythm",
+        "subTopics":[
+            {
+                "name": "Introduction"
+            },
+            {
+                "name": "Function"
+            },
+            {
+                "name": "Rhythm"
+            }
+        ]
+    },
+    {
+        "name": "Harmonic Progression",
+        "subTopics":[
+            {
+                "name": "Candences",
+                "subTopics":[
+                    {
+                        "name": "Perfect Cadence"
+                    },
+                    {
+                        "name": "Plagal Cadence"
+                    },
+                    {
+                        "name": "Interrupted Cadence"
+                    }
+                ]
+            },
+            {
+                "name": "Common Progressions"
+            },
+            {
+                "name": "Harmonic Substitution",
+                "subTopics": [
+                    {
+                        "name": "Introduction"
+                    },
+                    {
+                        "name": "Simplify"
+                    },
+                    {
+                        "name": "Complicate"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Modal Interchange",
+        "subTopics":[
+            {
+                "name": "Introduction"
+            }
+        ]
+    }
+]
