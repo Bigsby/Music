@@ -1,19 +1,33 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from '@angular/common';
+import { NgModule, Injectable } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { TheoryRoutingModule } from "./theory-routing.module";
-import { TheoryAppComponent } from "./_component/appcomponent";
+import { MusicCommonModule } from "../_common/common.module";
+import { DataServiceOptions } from "./../_common/common.interfaces";
+import { DataTypeMappings } from "./theory.models";
+
+import { TheoryRoutingModule, RoutedComponents } from "./theory-routing.module";
+
+@Injectable()
+class TheoryDataServiceOptions extends DataServiceOptions {
+    basePath: string = "theory";
+    mappings = DataTypeMappings;
+}
 
 @NgModule({
     declarations: [
-        TheoryAppComponent
+        RoutedComponents
     ],
     imports: [
         CommonModule,
+        MusicCommonModule,
         TheoryRoutingModule
-        //   BrowserModule,
-        //   AppRoutingModule
     ],
-    providers: []
+    providers: [
+        {
+            provide: DataServiceOptions,
+            useClass: TheoryDataServiceOptions
+        }
+    ]
 })
 export class TheoryModule { }
+

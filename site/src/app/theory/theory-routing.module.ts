@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TheoryAppComponent } from "./_component/appcomponent";
+import { IndexComponent } from "./index/index.component";
 
 const routes: Routes = [
     {
       path: '',
-      component: TheoryAppComponent
+      component: IndexComponent
     }
 ];
 
@@ -15,3 +15,7 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class TheoryRoutingModule { }
+
+export const RoutedComponents = [
+    IndexComponent
+]

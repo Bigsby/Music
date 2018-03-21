@@ -8,6 +8,7 @@
       "root": "src",
       "outDir": "./../docs",
       "assets": [
+        "data",
         "favicon.ico",
         "CNAME",
         "404.html"
