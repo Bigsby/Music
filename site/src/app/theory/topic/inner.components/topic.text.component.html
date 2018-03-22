@@ -1,1 +1,2 @@
-<p [innerHTML]="text"></p>
+<h2 *ngIf="text?.title" [innerHTML]="text.title"></h2>
+<p [innerHTML]="text?.text || text"></p>

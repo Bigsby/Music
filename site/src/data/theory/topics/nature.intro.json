@@ -1,8 +1,34 @@
 {
-    "items": [
+    "items": [{
+            "type": "image",
+            "content": {
+                "src": "images/nature/robin.jpg"
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/wolf.jpg"
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/monkey.jpg"
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/squirel.jpg"
+            }
+        },
         {
             "type": "text",
-            "content": "This is the intro test"
+            "content": {
+                "title": "Music <b>in and from</b> Nature",
+                "text": "This is the intro test"
+            }
         }
     ]
 }
