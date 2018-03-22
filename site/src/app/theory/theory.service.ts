@@ -16,12 +16,19 @@ export class TheoryService {
     getTopics(): Promise<Topic[]> {
         return this.data.getList(Topic)
             .then(topics => {
-                this.setProperties(null, topics);
+                var root: Topic = {
+                    id: "root",
+                    name: "Root",
+                    isRoot: true,
+                    index: 0,
+                    subTopics: topics
+                };
+                this.setProperties(root, topics);
                 return topics;
             });
     }
 
-    getTopic(id: string): Promise<Topic>{
+    getTopic(id: string): Promise<Topic> {
         return this.getTopics()
             .then(response => this.findTopic(id, response));
     }
@@ -31,31 +38,80 @@ export class TheoryService {
             .then(content => {
                 return content;
             })
-            .catch(error =>{
+            .catch(error => {
                 this.logger.error("Cannot find content for " + topic.id + ": " + error);
-                return { items:[{
-                    type: TopciContentItemType.text,
-                    content: "No Content yet..."
-                }] };
+                return {
+                    items: [{
+                        type: TopciContentItemType.text,
+                        content: "No Content yet..."
+                    }]
+                };
             });
+    }
+
+    getPrevious(topic: Topic): Topic {
+        if (!topic) {
+            return null;
+        }
+
+        if (topic.parent && topic.index > 0) {
+            return topic.parent.subTopics[topic.index - 1];
+        }
+
+        return topic.parent.isRoot ? null : topic.parent;
+    }
+
+    getNext(topic: Topic): Topic {
+        if (!topic) {
+            return null;
+        }
+
+        if (topic.subTopics && topic.subTopics.length) {
+            return topic.subTopics[0];
+        }
+
+        let current = topic;
+
+        while (current) {
+            let found = this.getNextSibling(current);
+
+            if (found) {
+                return found;
+            }
+
+            current = current.parent;
+        }
+
+        return null;
+    }
+
+    private getNextSibling(topic: Topic) {
+        if (!topic) {
+            return null;
+        }
+
+        if (topic.parent && topic.parent.subTopics && topic.parent.subTopics.length - 1 > topic.index) {
+            return topic.parent.subTopics[topic.index + 1];
+        }
+
+        return null;
     }
 
     private findTopic(id: string, topics: Topic[]): Topic {
 
-        if (!topics)
-        {
+        if (!topics) {
             return null;
         }
 
         var topic = topics.find(t => t.id == id);
         if (topic)
             return topic;
-        
+
         for (let topicIndex = 0; topicIndex < topics.length; topicIndex++) {
             const innerTopic = topics[topicIndex];
             let foundTopic = this.findTopic(id, innerTopic.subTopics);
 
-            if (foundTopic){
+            if (foundTopic) {
                 return foundTopic;
             }
         }
@@ -66,26 +122,11 @@ export class TheoryService {
     private setProperties(parent: Topic, topics: Topic[]) {
         if (topics) {
             topics.forEach((topic, index) => {
-                topic.id = (parent ? parent.id + "." : "") + topic.id;
+                topic.id = (parent.isRoot ? "" : parent.id + ".") + topic.id;
                 topic.index = index;
                 topic.parent = parent;
-                topic.path = this.getPath(parent);
                 this.setProperties(topic, topic.subTopics);
             });
         }
-    }
-
-    private getPath(parent: Topic): Topic[] {
-        var result = [];
-
-        if (parent) {
-            if (parent.path) {
-                result.concat(parent.path);
-            }
-
-            result.push(parent);
-        }
-
-        return result;
     }
 }

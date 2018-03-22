@@ -1,10 +1,17 @@
-<topic-breadcrumb [topic]="topic"></topic-breadcrumb>
-<h1>{{topic?.name}}</h1>
-<p>{{topic?.description}}</p>
-<div *ngFor="let item of content?.items" [ngSwitch]="item.type">
-    <topic-index *ngSwitchCase="'index'" [topic]="topic"></topic-index>
-    <div *ngSwitchCase="'text'">{{item.content}}</div>
-    <div *ngSwitchCase="'youTube'">youTube</div>
-    <div *ngSwitchCase="'didYouKnow'">didYouKnow</div>
-    <div *ngSwitchCase="'resource'">resource</div>
+<topic-breadcrumb class="noGrow" [topic]="topic"></topic-breadcrumb>
+<h1 class="noGrow">{{topic?.name}}</h1>
+<p class="noGrow">{{topic?.description}}</p>
+<div class="topicContainer" *ngFor="let item of content?.items" [ngSwitch]="item.type">
+    <topic-index *ngSwitchCase="itemType.index" [topic]="topic"></topic-index>
+    <topic-text *ngSwitchCase="itemType.text" [text]="item.content"></topic-text>
+    <topic-youtube *ngSwitchCase="itemType.youTube" [video]="item.content"></topic-youtube>
+    <div *ngSwitchCase="itemType.didYouKnow">didYouKnow</div>
+    <div *ngSwitchCase="itemType.resource">resource</div>
+    <!-- <div *ngSwitchDefault>Not set</div> -->
+</div>
+<div class="previousNextContainer">
+    <div *ngIf="!previous" class="link" [routerLink]="[ './../../' ]">&lt; Index</div>
+    <div *ngIf="previous" class="link" [routerLink]="[ './../' + previous?.id ]">&lt; {{previous?.name}}</div>
+    <div></div>
+    <div *ngIf="next" class="link" [routerLink]="[ './../' + next?.id ]">{{next?.name}} &gt;</div>
 </div>

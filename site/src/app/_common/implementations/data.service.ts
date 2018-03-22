@@ -25,13 +25,13 @@ export class DataService implements IDataService {
         let mapping = this.getMapping(ctr);
         if (!mapping) {
             this.logger.error("Unable to find mapping for: " + ctr["name"]);
-            return new Promise(() => null);
+            throw new Error("No mapping");
         }
 
-        return this.getListFromPath<T>(mapping, id)
+        return this.getFromPath<T>(mapping, id)
             .catch(error => {
                 this.logger.error("Error getting item from " + mapping + " id '" + id + "':" + error);
-                return null;
+                throw new Error("Unable to read item.");
             });;
     }
 
@@ -39,17 +39,17 @@ export class DataService implements IDataService {
         let mapping = this.getMapping(ctr);
         if (!mapping) {
             this.logger.error("Unable to find mapping for: " + ctr["name"]);
-            return new Promise(() => []);
+            throw new Error("No mapping");
         }
 
-        return this.getListFromPath<T[]>(mapping)
+        return this.getFromPath<T[]>(mapping)
             .catch(error => {
                 this.logger.error("Error getting list from " + mapping + ":" + error);
-                return [];
+                throw new Error("Unable to read list.")
             });;
     }
 
-    private getListFromPath<T>(path: string, file?: string): Promise<T> {
+    private getFromPath<T>(path: string, file?: string): Promise<T> {
         return this.http.get(this.basePath + path + (file || "") + this.fileExtension)
             .toPromise()
             .then(response => response.json() as T);

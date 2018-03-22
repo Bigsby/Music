@@ -11,4 +11,12 @@ import { Topic } from "./../../theory.models";
 })
 export class TopicBreadcrumbComponent{
     @Input() topic: Topic;
+
+    showGrandParent():boolean{
+        return this.showParent() && this.topic.parent.parent && !this.topic.parent.parent.isRoot;
+    }
+
+    showParent():boolean{
+        return this.topic && this.topic.parent && !this.topic.parent.isRoot;
+    }
 }

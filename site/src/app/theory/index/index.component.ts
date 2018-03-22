@@ -18,11 +18,7 @@ export class IndexComponent implements OnInit {
     }
 
     constructor(
-        private logger: ILogger,
         private theoryService: TheoryService) {
-        this.logger = logger.forContext(IndexComponent);
-
-        this.logger.log("me here!");
     }
 }
 

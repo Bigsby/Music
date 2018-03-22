@@ -1,4 +1,4 @@
-<ng-container *ngIf="topic?.parent?.parent">
+<ng-container *ngIf="showGrandParent()">
     <topic-breadcrumb [topic]="topic?.parent"></topic-breadcrumb><span class="seperator">&gt;</span>
 </ng-container>
-<div class="link" *ngIf="topic?.parent" [routerLink]="[ './../' + topic?.parent?.id ]">{{topic.parent.name}}</div>
+<div class="link" *ngIf="showParent()" [routerLink]="[ './../' + topic?.parent?.id ]">{{topic.parent.name}}</div>

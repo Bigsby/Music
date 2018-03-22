@@ -1,0 +1,29 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.noGrow {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.topicContainer{
+    flex-grow: 1;
+}
+
+.previousNextContainer{
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link{
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}

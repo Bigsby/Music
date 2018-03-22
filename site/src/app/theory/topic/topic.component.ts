@@ -5,6 +5,8 @@ import { TheoryService } from "./../theory.service";
 import { Topic, TopicContent, TopciContentItemType } from "./../theory.models";
 import { TopicIndexCompoennt } from "./inner.components/topic.index.component";
 import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.component";
+import { TopicTextComponent } from "./inner.components/topic.text.component";
+import { TopicYouTubeComponent } from "./inner.components/topic.youtube.component";
 
 @Component({
     templateUrl: "./topic.component.html",
@@ -15,7 +17,9 @@ import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.co
 export class TopicComponent implements OnInit {
     content: TopicContent;
     topic: Topic;
-    
+    previous: Topic;
+    next: Topic;
+    itemType = TopciContentItemType;
     constructor(
         private router: Router,
         private activeRoute: ActivatedRoute,
@@ -25,14 +29,28 @@ export class TopicComponent implements OnInit {
 
     ngOnInit(): void {
         this.activeRoute.params.subscribe(params => this.theoryService.getTopic(params.id)
-        .then(topicResponse => this.topic = topicResponse)
-        .then(() => this.theoryService.getContent(this.topic)
-        .then(contentResponse => this.content = contentResponse)));
+            .then(topicResponse => this.topic = topicResponse)
+            .then(() => {
+                this.theoryService.getContent(this.topic)
+                    .then(contentResponse => this.content = contentResponse);
+                this.setNextAndPrevious();
+            }));
+    }
+
+    private setNextAndPrevious() {
+        if (!this.topic){
+            return;
+        }
+
+        this.next = this.theoryService.getNext(this.topic);
+        this.previous = this.theoryService.getPrevious(this.topic);
     }
 }
 
 export const TopicComponents = [
     TopicComponent,
+    TopicBreadcrumbComponent,
     TopicIndexCompoennt,
-    TopicBreadcrumbComponent
+    TopicTextComponent,
+    TopicYouTubeComponent
 ]
