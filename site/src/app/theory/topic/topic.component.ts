@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 
 import { TheoryService } from "./../theory.service";
-import { TopicContent, TopciContentItemType } from "./../theory.models";
+import { Topic, TopicContent, TopciContentItemType } from "./../theory.models";
 import { TopicIndexCompoennt } from "./inner.components/topic.index.component";
 import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.component";
 
@@ -14,9 +14,8 @@ import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.co
 })
 export class TopicComponent implements OnInit {
     content: TopicContent;
-    noContent: TopicContent = {
-        title: "N/A"
-    };
+    topic: Topic;
+    
     constructor(
         private router: Router,
         private activeRoute: ActivatedRoute,
@@ -25,10 +24,10 @@ export class TopicComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.activeRoute.params.subscribe(params => this.theoryService.getContent(params.id)
-        .then(contentResponse => this.content = contentResponse || this.noContent)
-        .catch(error => this.content = this.noContent));
-        
+        this.activeRoute.params.subscribe(params => this.theoryService.getTopic(params.id)
+        .then(topicResponse => this.topic = topicResponse)
+        .then(() => this.theoryService.getContent(this.topic)
+        .then(contentResponse => this.content = contentResponse)));
     }
 }
 

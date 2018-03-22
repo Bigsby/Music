@@ -11,8 +11,6 @@ export class Topic {
 }
 
 export class TopicContent {
-    topic?: Topic;
-    title: string;
     items?: TopicContentItem[];
 }
 

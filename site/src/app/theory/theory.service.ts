@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Topic, TopicContent } from "./theory.models";
+import { Topic, TopicContent, TopciContentItemType } from "./theory.models";
 
 import { IDataService, ILogger } from "./../_common/common.interfaces";
 import { forEach } from "@angular/router/src/utils/collection";
@@ -21,16 +21,22 @@ export class TheoryService {
             });
     }
 
-    getContent(id: string): Promise<TopicContent> {
+    getTopic(id: string): Promise<Topic>{
         return this.getTopics()
-            .then(response => this.getContentForTopic(this.findTopic(id, response)));
+            .then(response => this.findTopic(id, response));
     }
 
-    private getContentForTopic(topic: Topic): Promise<TopicContent> {
+    getContent(topic: Topic): Promise<TopicContent> {
         return this.data.getSingle(TopicContent, topic.id)
             .then(content => {
-                content.topic = topic;
                 return content;
+            })
+            .catch(error =>{
+                this.logger.error("Cannot find content for " + topic.id + ": " + error);
+                return { items:[{
+                    type: TopciContentItemType.text,
+                    content: "No Content yet..."
+                }] };
             });
     }
 

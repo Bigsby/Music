@@ -1,8 +1,8 @@
-<topic-breadcrumb [topic]="content?.topic"></topic-breadcrumb>
-<h1>{{content?.topic?.name}}</h1>
-<p>{{content?.topic?.description}}</p>
+<topic-breadcrumb [topic]="topic"></topic-breadcrumb>
+<h1>{{topic?.name}}</h1>
+<p>{{topic?.description}}</p>
 <div *ngFor="let item of content?.items" [ngSwitch]="item.type">
-    <topic-index *ngSwitchCase="'index'" [topic]="content.topic"></topic-index>
+    <topic-index *ngSwitchCase="'index'" [topic]="topic"></topic-index>
     <div *ngSwitchCase="'text'">{{item.content}}</div>
     <div *ngSwitchCase="'youTube'">youTube</div>
     <div *ngSwitchCase="'didYouKnow'">didYouKnow</div>
