@@ -1,8 +1,22 @@
 {
-    "items": [
+    "items": [{
+            "type": "text",
+            "content": {
+                "title": "Music is (just) a(nother) phonetic language"
+            }
+        },
+        {
+            "type": "image",
+            "content": "images/nature/SoundOfMusic.png"
+        },
         {
             "type": "text",
-            "content": "Music is a language"
+            "content": {
+                "texts": [
+                    "When you read you begin with A, B, C<br/>When you sing you begin with Do, Re, Me<br/>When you sing you also begin with C, D, E",
+                    "When you count you begin with 1, 2, 3<br/>When you sing you also begin with 1, 2, 3<br/>When you sing you also begin with \u2160, \u2161, \u2162"
+                ]
+            }
         }
     ]
 }

@@ -15,6 +15,14 @@
         {
           "type": "youTube",
           "content": "fsAYJyYXooE"
+        },
+        {
+            "type": "text",
+            "content": "Some people actually study and transcribe animal music and, in some cases, it's incredibly diatonic, i.e., fairly \"standard\" music."
+        },
+        {
+            "type": "image",
+            "content": "images/nature/cardinalscore.jpg"
         }
     ]
 }

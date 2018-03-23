@@ -1,0 +1,10 @@
+:host() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+p {
+    width: 800px;
+}

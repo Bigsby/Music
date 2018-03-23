@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
     selector: "topic-text",
@@ -9,31 +10,58 @@ import { Component, Input } from "@angular/core";
 })
 export class TopicTextComponent {
     @Input() content: any;
-    get text(): string {
-        if (typeof this.content === "string") {
-            return this.content;
-        }
-
-        return this.content.text;
+    constructor(private sanitizer: DomSanitizer){
 
     }
 
-    get title(): string {
+    get texts(): SafeHtml[] {
+        if (typeof this.content === "string") {
+            return [this.sanitizer.bypassSecurityTrustHtml(this.content)];
+        }
+
+        let result = [];
+        if (this.content.text) {
+            result.push(this.sanitizer.bypassSecurityTrustHtml(this.content.text));
+        }
+
+        if (this.content.texts instanceof Array) {
+            result = result.concat(this.content.texts.map(t => this.sanitizer.bypassSecurityTrustHtml(t)));
+        }
+
+        return result;
+
+    }
+
+    get title(): SafeHtml {
         if (this.content.title) {
-            return this.content.title;
+            return this.sanitizer.bypassSecurityTrustHtml(this.content.title);
         }
         return "";
     }
 }
 
-@Component({
-  selector: 'u',
-  template: `
-   <span><ng-content></ng-content></span>
-  `,
-  styles: [
-      "span { text-decoration: underline }"
-  ]
-})
-export class UnderlineTextComponent {
-}
+// @Component({
+//     selector: "t-u",
+//     template: "UUU",
+//     styles: [
+//         ":host { text-decoration: underline }"
+//     ]
+// })
+// export class UnderlineTextComponent {
+//     constructor(){
+//         alert("underlying");
+//     }
+// }
+
+// @Component({
+//     selector: "t-r",
+//     template: "RRR<ng-content></ng-content>", 
+//     styles: [
+//         ":host { font-family: 'Times New Roman', Times, serif }"
+//     ]
+// })
+// export class RomanTextComponent {
+//     constructor(){
+//         alert("underlying");
+//     }
+// }

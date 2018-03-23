@@ -1,2 +1,2 @@
 <h2 *ngIf="title" [innerHTML]="title"></h2>
-<p *ngIf="text" [innerHTML]="text"></p>
+<p *ngFor="let text of texts" [innerHTML]="text"></p>

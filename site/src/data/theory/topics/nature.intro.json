@@ -1,6 +1,5 @@
 {
-    "items": [
-        {
+    "items": [{
             "type": "text",
             "content": {
                 "title": "Music is <u>in and from</u> Nature"
@@ -9,28 +8,25 @@
         {
             "type": "image",
             "content": {
-                "src": "images/nature/squirrel.jpg",
-                "style": {
-                    "width": "25%"
-                }
-            }
-        },
-        {
-            "type": "image",
-            "content": {
-                "src": "images/nature/robin.jpg",
-                "style": {
-                    "width": "25%"
-                }
-            }
-        },
-        {
-            "type": "image",
-            "content": {
-                "src": "images/nature/monkey.jpg",
-                "style": {
-                    "width": "25%"
-                }
+                "images": [{
+                        "src": "images/nature/squirrel.jpg",
+                        "style": {
+                            "width": "25%"
+                        }
+                    },
+                    {
+                        "src": "images/nature/robin.jpg",
+                        "style": {
+                            "width": "25%"
+                        }
+                    },
+                    {
+                        "src": "images/nature/monkey.jpg",
+                        "style": {
+                            "width": "25%"
+                        }
+                    }
+                ]
             }
         },
         {

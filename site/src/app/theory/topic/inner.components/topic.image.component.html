@@ -1,1 +1,1 @@
-<img [src]="content.src" [ngStyle]="content.style"/>
+<img *ngFor="let image of images" [src]="image.src" [ngStyle]="image.style"/>
