@@ -2,7 +2,27 @@
     "items": [
         {
             "type": "text",
-            "content": "Animals make music"
+            "content": "Humans are not the only animals that produce beautiful music."
+        },
+        {
+            "type": "youTube",
+            "content": "buo5h5lLcpw"
+        },
+        {
+            "type": "text",
+            "content": "Nor are the only one to appreciate music."
+        },
+        {
+          "type": "youTube",
+          "content": "fsAYJyYXooE"
+        },
+        {
+            "type": "text",
+            "content": "Some people actually study and transcribe animal music and, in some cases, it's incredibly diatonic, i.e., fairly \"standard\" music."
+        },
+        {
+            "type": "image",
+            "content": "images/nature/cardinalscore.jpg"
         }
     ]
 }
