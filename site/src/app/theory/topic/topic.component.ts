@@ -5,8 +5,9 @@ import { TheoryService } from "./../theory.service";
 import { Topic, TopicContent, TopciContentItemType } from "./../theory.models";
 import { TopicIndexCompoennt } from "./inner.components/topic.index.component";
 import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.component";
-import { TopicTextComponent } from "./inner.components/topic.text.component";
+import { TopicTextComponent, UnderlineTextComponent } from "./inner.components/topic.text.component";
 import { TopicYouTubeComponent } from "./inner.components/topic.youtube.component";
+import { TopicImageComponent } from "./inner.components/topic.image.component";
 
 @Component({
     templateUrl: "./topic.component.html",
@@ -51,6 +52,7 @@ export const TopicComponents = [
     TopicComponent,
     TopicBreadcrumbComponent,
     TopicIndexCompoennt,
-    TopicTextComponent,
-    TopicYouTubeComponent
+    TopicTextComponent, UnderlineTextComponent,
+    TopicYouTubeComponent,
+    TopicImageComponent
 ]

@@ -4,8 +4,9 @@
 <div class="topicContainer">
     <ng-container *ngFor="let item of content?.items" [ngSwitch]="item.type">
         <topic-index *ngSwitchCase="itemType.index" [topic]="topic"></topic-index>
-        <topic-text *ngSwitchCase="itemType.text" [text]="item.content"></topic-text>
-        <topic-youtube *ngSwitchCase="itemType.youTube" [video]="item.content"></topic-youtube>
+        <topic-text *ngSwitchCase="itemType.text" [content]="item.content"></topic-text>
+        <topic-youtube *ngSwitchCase="itemType.youTube" [content]="item.content"></topic-youtube>
+        <topic-image *ngSwitchCase="itemType.image" [content]="item.content"></topic-image>
         <div *ngSwitchCase="itemType.didYouKnow">didYouKnow</div>
         <div *ngSwitchCase="itemType.resource">resource</div>
         <!-- <div *ngSwitchDefault>Not set</div> -->

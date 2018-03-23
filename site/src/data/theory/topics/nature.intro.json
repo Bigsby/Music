@@ -1,34 +1,45 @@
 {
-    "items": [{
-            "type": "image",
+    "items": [
+        {
+            "type": "text",
             "content": {
-                "src": "images/nature/robin.jpg"
+                "title": "Music is <u>in and from</u> Nature"
             }
         },
         {
             "type": "image",
             "content": {
-                "src": "images/nature/wolf.jpg"
+                "src": "images/nature/squirrel.jpg",
+                "style": {
+                    "width": "25%"
+                }
             }
         },
         {
             "type": "image",
             "content": {
-                "src": "images/nature/monkey.jpg"
+                "src": "images/nature/robin.jpg",
+                "style": {
+                    "width": "25%"
+                }
             }
         },
         {
             "type": "image",
             "content": {
-                "src": "images/nature/squirel.jpg"
+                "src": "images/nature/monkey.jpg",
+                "style": {
+                    "width": "25%"
+                }
             }
         },
         {
             "type": "text",
-            "content": {
-                "title": "Music <b>in and from</b> Nature",
-                "text": "This is the intro test"
-            }
+            "content": "Music is not a human invention. We, humans, strive for uniqueness as individuals and as a species. We are, indeed, special and unique in many cases but we did not invent music."
+        },
+        {
+            "type": "text",
+            "content": "There is a plethora of animals that use music and, most of them, use it with the same function: <u>a mating call</u>. We just \"civilized\" it like we do with everything else."
         }
     ]
 }
