@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import 'rxjs/add/operator/toPromise'
+import 'rxjs/add/operator/toPromise';
 
 import { IDataService, DataServiceOptions, DataServiceTypeMapping, ILogger } from "./../common.interfaces";
 

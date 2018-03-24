@@ -1,0 +1,56 @@
+@import "./../../../../styles/colors.scss";
+
+:host(){
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+
+    &.c {
+        text-align: center;
+    }
+
+    &.b {
+        font-weight: bold;
+    }
+
+    &.w {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &.p {
+        background-color: $primary-color;
+    }
+
+    &.s {
+        background-color: $secondary-color;
+        color: $quaternary-color;
+    }
+
+    &.t {
+        background-color: $tertiary-color;
+        color: $quaternary-color;
+    }
+
+    &.q {
+        background-color: $primary-color;
+        color: $quaternary-color;
+    }
+}
+
+
+

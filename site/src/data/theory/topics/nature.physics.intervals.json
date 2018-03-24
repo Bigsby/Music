@@ -2,7 +2,10 @@
     "items": [
         {
             "type": "text",
-            "content": "Physics Intervals"
+            "content": {
+                "title": "The ratios between frequencies",
+                "texts": ""
+            }
         }
     ]
 }

@@ -27,7 +27,8 @@ export const TopciContentItemType = {
     image: "image",
     link: "link",
     notesTable: "notesTable",
-    changes: "changes"
+    changes: "changes",
+    table: "table"
 }
 
 export const DataTypeMappings: DataServiceTypeMapping = {

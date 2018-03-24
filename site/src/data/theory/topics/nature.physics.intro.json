@@ -2,7 +2,9 @@
     "items": [
         {
             "type": "text",
-            "content": "Physics intro"
+            "content": {
+                "title": "The laws of Physics",
+                "text": "As everything from nature, music and its mathematics are quantifiable by physics and the laws applied to everything else."}
         }
     ]
 }

@@ -8,6 +8,7 @@ import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.co
 import { TopicTextComponent } from "./inner.components/topic.text.component";
 import { TopicYouTubeComponent } from "./inner.components/topic.youtube.component";
 import { TopicImageComponent } from "./inner.components/topic.image.component";
+import { TopicTableComponent } from "./inner.components/topic.table.component";
 
 @Component({
     templateUrl: "./topic.component.html",
@@ -54,5 +55,6 @@ export const TopicComponents = [
     TopicIndexCompoennt,
     TopicTextComponent,
     TopicYouTubeComponent,
-    TopicImageComponent
+    TopicImageComponent,
+    TopicTableComponent
 ]

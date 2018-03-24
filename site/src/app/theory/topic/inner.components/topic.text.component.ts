@@ -1,6 +1,8 @@
 import { Component, Input } from "@angular/core";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
+import { TopicBaseComponent } from "./topic.base.component";
+
 @Component({
     selector: "topic-text",
     templateUrl: "./topic.text.component.html",
@@ -8,10 +10,9 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         "./topic.text.component.scss"
     ]
 })
-export class TopicTextComponent {
-    @Input() content: any;
+export class TopicTextComponent extends TopicBaseComponent {
     constructor(private sanitizer: DomSanitizer){
-
+        super();
     }
 
     get texts(): SafeHtml[] {

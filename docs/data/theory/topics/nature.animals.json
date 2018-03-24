@@ -6,15 +6,27 @@
         },
         {
             "type": "youTube",
-            "content": "buo5h5lLcpw"
+            "content": {
+                "videoId": "buo5h5lLcpw",
+                "style": {
+                    "width": "560px",
+                    "height": "315px"
+                }
+            }
         },
         {
             "type": "text",
             "content": "Nor are the only one to appreciate music."
         },
         {
-          "type": "youTube",
-          "content": "fsAYJyYXooE"
+            "type": "youTube",
+            "content": {
+                "videoId": "fsAYJyYXooE",
+                "style": {
+                    "width": "315px",
+                    "height": "315px"
+                }
+            }
         },
         {
             "type": "text",
@@ -22,7 +34,12 @@
         },
         {
             "type": "image",
-            "content": "images/nature/cardinalscore.jpg"
+            "content": {
+                "src": "images/nature/cardinalscore.jpg",
+                "style":{
+                    "width": "400px"
+                }
+            }
         }
     ]
 }

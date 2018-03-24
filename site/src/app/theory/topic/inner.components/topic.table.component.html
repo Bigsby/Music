@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let header of definition.headers" [innerHTML]="header.content" [class]="header.class" [colSpan]="header.colSpan || 1"
+                [rowSpan]="header.rowSpan || 1"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of definition.rows">
+            <td *ngFor="let cell of row.cells" [innerHTML]="cell.content" [class]="cell.class" [colSpan]="cell.colSpan || 1"
+                [rowSpan]="cell.rowSpan || 1"></td>
+        </tr>
+    </tbody>
+</table>

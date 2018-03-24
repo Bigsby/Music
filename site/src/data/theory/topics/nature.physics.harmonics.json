@@ -2,7 +2,10 @@
     "items": [
         {
             "type": "text",
-            "content": "This is Nature Physics Harmonics"
+            "content": {
+                "title": "Perfect vibrations",
+                "text": "Every material has its optimal "
+            }
         }
     ]
 }

@@ -1,6 +1,8 @@
 import { Component, Input } from "@angular/core";
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
+import { TopicBaseComponent } from "./topic.base.component";
+
 @Component({
     selector: "topic-youtube",
     templateUrl: "./topic.youtube.component.html",
@@ -8,14 +10,24 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
         "./topic.youtube.component.scss"
     ]
 })
-export class TopicYouTubeComponent {
-    @Input() content: string;
+export class TopicYouTubeComponent extends TopicBaseComponent {
     private youTubeBaseURL = "https://www.youtube.com/embed/";
     constructor(private sanitizer: DomSanitizer) {
-
+        super();
     }
 
     get videoUrl(): SafeUrl{
-        return this.sanitizer.bypassSecurityTrustResourceUrl(this.youTubeBaseURL + this.content);
+        let url = "";
+        if (typeof this.content === "string") {
+            url = this.content;
+        } else {
+            url = this.content.videoId;
+        }
+
+        return this.sanitizer.bypassSecurityTrustResourceUrl(this.youTubeBaseURL + url);
+    }
+
+    get style(): any{
+        return this.content.style;
     }
 }

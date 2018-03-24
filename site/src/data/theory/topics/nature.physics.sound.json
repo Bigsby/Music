@@ -2,7 +2,28 @@
     "items": [
         {
             "type": "text",
-            "content": "Physics Sound"
+            "content": "Sound is a traveling longitudinal wave wich is an oscillation of pressure."
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/soundwaves.svg",
+                "type": "svg",
+                "style": {
+                    "width": "600px"
+                }
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "texts": [
+                    "Accoustic instruments, or any natural material for that matter, produce multiple frequencies.",
+                    "Humans usually perceive the lowest frequency",
+                    "Frequencies from different sources <em>meet</em> mid-air and combine <em>harmonically</em> if they are <em>friendly</em> with each other.",
+                    "The <em>unfriendliness</em> of frequencies is also used, for instance, in car horns to produce piercing sounds."
+                ]
+            }
         }
     ]
 }

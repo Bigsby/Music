@@ -34,12 +34,12 @@
                         "name": "Frequencies"
                     },
                     {
-                        "id": "intervals",
-                        "name": "Intervals"
-                    },
-                    {
                         "id": "harmonics",
                         "name": "Harmonics"
+                    },
+                    {
+                        "id": "intervals",
+                        "name": "Intervals"
                     }
                 ]
             }

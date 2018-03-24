@@ -2,7 +2,77 @@
     "items": [
         {
             "type": "text",
-            "content": "Physics Frequencies"
+            "content": {
+                "title": "Humans perceive frequency of sound waves as pitch <em>aka</em> musical note",
+                "texts": [
+                    "Since sound is a wave that goes up and down, the number of times it goes up and down within a certain amount of time is called frequency.",
+                    "The <em>standard</em> unit of measure of frequency is the <a href='https://en.wikipedia.org/wiki/Hertz' target='_blank'>Hertz<a>, noted as <b>Hz</b>. 1 <b>Hz</b> means, «the wave goes up, down and back to the starting point in 1 second». The higher the frequency, the sharper the sound. Inversely, the lower the frequency, the flatter the sound."
+                ]
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/wavefrequency.gif",
+                "style": {
+                    "width": "400px"
+                }
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "title": "Standard Reference",
+                "text": "In music, as every other measurable science, having a well known (i.e., standard) reference is key to technological development. In 1955, the <em>International Organization for Standardization</em> created <a href='https://www.iso.org/standard/3601.html' target='_blank'><b>ISO 16</b></a> that defined:"
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "title": "<u>A4 = 440Hz</u>",
+                "text": "A <em>standard</em> tunning fork <em>plays</em> a sound with that exact frequency."
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/tunningfork.png",
+                "style": {
+                    "width": "300px"
+                }
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "title": "Amplitude of wave <em>aka</em> volume",
+                "text": "The standard unit of measure of amplitude of the sound wave, more commonly known as volume, is the <a href='https://en.wikipedia.org/wiki/Decibel' target='_blank'>Decibel</a>, noted as <b>dB</b>. It represents the <em>distance</em> between the highest and lowest points of the sound wave and it is logarithmic."
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "title": "Did you know?",
+                "text": "<b>Hertz</b> unit was named after <a href='https://en.wikipedia.org/wiki/Heinrich_Hertz' target='_blank'>Heinrich Rudolph Hertz</a>. He has nothing to do with the unit (or music) but proved the existence of electromagnetic waves and, to honour that, the unit was named after him."
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "src": "images/nature/heinrichhertz.jpg",
+                "style": {
+                    "width": "300px"
+                }
+            }
+        },
+        {
+            "type": "text",
+            "content": {
+                "texts": [
+                    "Depending on the amplitude, the human ear can detect frequencies from 20Hz up to 20kHz. A standard piano's lowest note is around 27.5Hz and the highest is around 4186Hz.",
+                    "Some people still advocate that the standard should be <b>432Hz</b>, also knows as <em>Verdi's A</em>, using arguments like: it's mathematically consisten with the univers; transmits beneficial healing energy, because it is a pure tone of math fundamental to nature; or acussing Joseph Goebbels (yes, the Nazi one) of forcing the adoption of 440Hz to provoke bad energy in the people."
+                ]
+            }
         }
     ]
 }

@@ -1,1 +1,6 @@
-<img *ngFor="let image of images" [src]="image.src" [ngStyle]="image.style"/>
+<div>
+    <ng-container *ngFor="let image of images">
+        <img [src]="image.src" [ngStyle]="image.style"/>
+    </ng-container>
+
+</div>
