@@ -1,2 +1,4 @@
-[MEI](http://music-encoding.org/)
-[IEEE 1599](http://ieeexplore.ieee.org/document/4803900/)
+- [MEI](http://music-encoding.org/)
+- [IEEE 1599](http://ieeexplore.ieee.org/document/4803900/)
+- [Jazz Guitar lessons](https://mattwarnockguitar.com/jazz-guitar/)
+- [Jazz Standards Scores](http://www.guitarcats.com/realbook-jazz-standards/A)
