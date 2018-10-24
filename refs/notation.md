@@ -8,6 +8,7 @@
 - [http://musicnotation.org/](http://musicnotation.org/)
 - [http://www.music-notation.info/](http://www.music-notation.info/)
 - [Mutopia](http://www.mutopiaproject.org/index.html)
+- [Musical Symbols](https://en.wikipedia.org/wiki/List_of_musical_symbols)
 
 # Software
 - [MuseScore](https://musescore.org/)
@@ -17,3 +18,4 @@
 
 # Libraries
 - [VexFlow](http://www.vexflow.com/)
+  - Simile bar and harmony
