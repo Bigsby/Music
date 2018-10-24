@@ -9,9 +9,7 @@
             "content": {
                 "src": "images/nature/soundwaves.svg",
                 "type": "svg",
-                "style": {
-                    "width": "600px"
-                }
+                "class": "w"
             }
         },
         {

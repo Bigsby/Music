@@ -21,6 +21,11 @@ export class TopicTextComponent extends TopicBaseComponent {
         }
 
         let result = [];
+
+        if (!this.content){
+            return result;
+        }
+        
         if (this.content.text) {
             result.push(this.sanitizer.bypassSecurityTrustHtml(this.content.text));
         }
@@ -34,7 +39,7 @@ export class TopicTextComponent extends TopicBaseComponent {
     }
 
     get title(): SafeHtml {
-        if (this.content.title) {
+        if (this.content && this.content.title) {
             return this.sanitizer.bypassSecurityTrustHtml(this.content.title);
         }
         return "";

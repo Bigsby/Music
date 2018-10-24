@@ -3,9 +3,39 @@
         {
             "type": "text",
             "content": {
-                "title": "Perfect vibrations",
-                "text": "Every material has its optimal "
+                "title": "Size matters",
+                "text": "Every material has its optimal vibration frequency. The optimal frequency in inversely correlated to the size of the material, that is: the larger the material the lower the frequency; the smaller the material, the higher the frequency."
             }
+        },
+        {
+            "type": "youTube",
+            "content": {
+                "videoId": "mbIZ1tjcbUk",
+                "class": "w"
+            }
+        },
+        {
+            "type": "text",
+            "content": "Some instruments, like the trombone, just change its size to change pitch."
+        },
+        {
+            "type": "youTube",
+            "content": {
+                "videoId": "CtpyTvRoryQ",
+                "time": 23,
+                "class": "f"
+            }
+        },
+        {
+            "type": "text",
+            "content":{
+                "title": "Multiply",
+                "text": "One of the "
+            }
+        },
+        {
+            "type": "text",
+            "content": "If you'd like for a thourough deep dive into harmonics, watch this <a href='https://www.youtube.com/watch?v=a89X1fXeVkw&list=PLLUpvzaZLf3LniC-hTrrrZO3p5Y1eKY60' target='_blank'>>YouTube list about waves.</a>."
         }
     ]
 }

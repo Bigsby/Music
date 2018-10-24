@@ -14,9 +14,7 @@
             "type": "image",
             "content": {
                 "src": "images/nature/wavefrequency.gif",
-                "style": {
-                    "width": "400px"
-                }
+                "class": "h"
             }
         },
         {
@@ -37,9 +35,7 @@
             "type": "image",
             "content": {
                 "src": "images/nature/tunningfork.png",
-                "style": {
-                    "width": "300px"
-                }
+                "class": "h"
             }
         },
         {
@@ -52,7 +48,7 @@
         {
             "type": "text",
             "content": {
-                "title": "Did you know?",
+                "title": "¿Did you know?",
                 "text": "<b>Hertz</b> unit was named after <a href='https://en.wikipedia.org/wiki/Heinrich_Hertz' target='_blank'>Heinrich Rudolph Hertz</a>. He has nothing to do with the unit (or music) but proved the existence of electromagnetic waves and, to honour that, the unit was named after him."
             }
         },
@@ -60,9 +56,7 @@
             "type": "image",
             "content": {
                 "src": "images/nature/heinrichhertz.jpg",
-                "style": {
-                    "width": "300px"
-                }
+                "class": "h"
             }
         },
         {

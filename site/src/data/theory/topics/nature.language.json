@@ -11,9 +11,7 @@
             "type": "image",
             "content": {
                 "src": "images/nature/SoundOfMusic.png",
-                "style": {
-                    "width": "600px"
-                }
+                "class": "w"
             }
         },
         {

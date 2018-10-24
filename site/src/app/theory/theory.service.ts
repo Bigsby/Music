@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Topic, TopicContent, TopciContentItemType } from "./theory.models";
+import { Topic, TopicContent, TopicContentItemType } from "./theory.models";
 
 import { IDataService, ILogger } from "./../_common/common.interfaces";
 import { forEach } from "@angular/router/src/utils/collection";
@@ -42,7 +42,7 @@ export class TheoryService {
                 this.logger.error("Cannot find content for " + topic.id + ": " + error);
                 return {
                     items: [{
-                        type: TopciContentItemType.text,
+                        type: TopicContentItemType.text,
                         content: "No Content yet..."
                     }]
                 };

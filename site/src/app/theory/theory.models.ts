@@ -3,6 +3,7 @@ import { DataServiceTypeMapping } from "./../_common/common.interfaces";
 export class Topic {
     id: string;
     name: string;
+    type?: string;
     description?: string;
     index: number;
     parent?: Topic;
@@ -11,15 +12,15 @@ export class Topic {
 }
 
 export class TopicContent {
-    items?: TopicContentItem[];
+    items: TopicContentItem[];
 }
 
 export class TopicContentItem {
     type: string;
-    content: any;
+    content?: any;
 }
 
-export const TopciContentItemType = {
+export const TopicContentItemType = {
     index: "index",
     text: "text",
     youTube: "youTube",
@@ -29,6 +30,10 @@ export const TopciContentItemType = {
     notesTable: "notesTable",
     changes: "changes",
     table: "table"
+}
+
+export const TopicType = {
+    index: "index"
 }
 
 export const DataTypeMappings: DataServiceTypeMapping = {

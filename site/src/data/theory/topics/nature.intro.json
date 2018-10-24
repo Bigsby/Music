@@ -10,21 +10,15 @@
             "content": {
                 "images": [{
                         "src": "images/nature/squirrel.jpg",
-                        "style": {
-                            "width": "25%"
-                        }
+                        "class": "q"
                     },
                     {
                         "src": "images/nature/robin.jpg",
-                        "style": {
-                            "width": "25%"
-                        }
+                        "class": "q"
                     },
                     {
                         "src": "images/nature/monkey.jpg",
-                        "style": {
-                            "width": "25%"
-                        }
+                        "class": "q"
                     }
                 ]
             }

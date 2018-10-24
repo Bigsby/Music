@@ -8,10 +8,7 @@
             "type": "youTube",
             "content": {
                 "videoId": "buo5h5lLcpw",
-                "style": {
-                    "width": "560px",
-                    "height": "315px"
-                }
+                "class": "w"
             }
         },
         {
@@ -22,10 +19,7 @@
             "type": "youTube",
             "content": {
                 "videoId": "fsAYJyYXooE",
-                "style": {
-                    "width": "315px",
-                    "height": "315px"
-                }
+                "class": "s"
             }
         },
         {

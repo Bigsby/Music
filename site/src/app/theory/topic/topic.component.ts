@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 
 import { TheoryService } from "./../theory.service";
-import { Topic, TopicContent, TopciContentItemType } from "./../theory.models";
+import { Topic, TopicType, TopicContent, TopicContentItemType } from "./../theory.models";
 import { TopicIndexCompoennt } from "./inner.components/topic.index.component";
 import { TopicBreadcrumbComponent } from "./inner.components/topic.breadcrumb.component";
 import { TopicTextComponent } from "./inner.components/topic.text.component";
@@ -21,7 +21,7 @@ export class TopicComponent implements OnInit {
     topic: Topic;
     previous: Topic;
     next: Topic;
-    itemType = TopciContentItemType;
+    itemType = TopicContentItemType;
     constructor(
         private router: Router,
         private activeRoute: ActivatedRoute,
@@ -33,14 +33,22 @@ export class TopicComponent implements OnInit {
         this.activeRoute.params.subscribe(params => this.theoryService.getTopic(params.id)
             .then(topicResponse => this.topic = topicResponse)
             .then(() => {
-                this.theoryService.getContent(this.topic)
-                    .then(contentResponse => this.content = contentResponse);
                 this.setNextAndPrevious();
+                if (this.topic.type === TopicType.index) {
+                    this.content = {
+                        items:[{
+                            type: TopicContentItemType.index
+                        }]
+                    }
+                } else {
+                    this.theoryService.getContent(this.topic)
+                        .then(contentResponse => this.content = contentResponse);
+                }
             }));
     }
 
     private setNextAndPrevious() {
-        if (!this.topic){
+        if (!this.topic) {
             return;
         }
 

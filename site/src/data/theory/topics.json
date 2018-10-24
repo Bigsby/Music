@@ -2,6 +2,7 @@
     {
         "id": "nature",
         "name": "Nature",
+        "type": "index",
         "description": "Music as a language from nature & its physics",
         "subTopics": [
             {
@@ -19,6 +20,7 @@
             {
                 "id": "physics",
                 "name": "Physics",
+                "type": "index",
                 "description": "Frequencies, harmonics & intervals",
                 "subTopics": [
                     {
@@ -48,6 +50,7 @@
     {
         "id": "notation",
         "name": "Notation",
+        "type": "index",
         "description": "The symbols used to write and read music",
         "subTopics": [
             {
@@ -87,6 +90,7 @@
     {
         "id": "rhythm",
         "name": "Rhythm",
+        "type": "index",
         "description": "The rhythm section",
         "subTopics": [
             {
@@ -98,11 +102,13 @@
     {
         "id": "notes",
         "name": "Notes",
+        "type": "index",
         "description": "Scales, chords & their inversions",
         "subTopics": [
             {
                 "id": "scales",
                 "name": "Scales",
+                "type": "index",
                 "subTopics": [
                     {
                         "id": "intro",
@@ -127,6 +133,7 @@
                     {
                         "id": "altered",
                         "name": "Altered Scales",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "intro",
@@ -159,6 +166,7 @@
             {
                 "id": "chords",
                 "name": "Chords",
+                "type": "index",
                 "subTopics": [
                     {
                         "id": "intro",
@@ -171,6 +179,7 @@
                     {
                         "id": "fields",
                         "name": "Harmonic Fields",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "intro",
@@ -195,6 +204,7 @@
             {
                 "id": "inversions",
                 "name": "Inversions",
+                "type": "index",
                 "subTopics": [
                     {
                         "id": "intro",
@@ -207,7 +217,12 @@
                     {
                         "id": "scales",
                         "name": "Scales",
+                        "type": "index",
                         "subTopics": [
+                            {
+                                "id": "intro",
+                                "name": "Introduction"
+                            },
                             {
                                 "id": "major",
                                 "name": "Major Scale - Greek Modes"
@@ -229,6 +244,7 @@
     {
         "id": "harmony",
         "name": "Harmony",
+        "type": "index",
         "description": "Harmonic function, rhythm, proression & substitutions",
         "subTopics": [
             {
@@ -246,10 +262,12 @@
             {
                 "id": "progression",
                 "name": "Harmonic Progression",
+                "type": "index",
                 "subTopics": [
                     {
                         "id": "cadences",
                         "name": "Candences",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "perfect",
@@ -268,6 +286,7 @@
                     {
                         "id": "common",
                         "name": "Common Progressions",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "I-vi-ii-V",
@@ -290,6 +309,7 @@
                     {
                         "id": "substitution",
                         "name": "Harmonic Substitution",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "intro",
@@ -324,6 +344,7 @@
                     {
                         "id": "interchange",
                         "name": "Modal Interchange",
+                        "type": "index",
                         "subTopics": [
                             {
                                 "id": "intro",

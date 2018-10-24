@@ -1,8 +1,21 @@
-:host{
+:host {
     display:flex;
     justify-content: center;
 }
-iframe{
-    width: 800px;
-    height: 600px;
+
+iframe {
+    &.s {
+        width: 315px;
+        height: 315px;
+    }
+
+    &.f {
+        width: 420px;
+        height: 315px;
+    }
+
+    &.w {
+        width: 560px;
+        height: 315px;
+    }
 }

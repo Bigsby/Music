@@ -25,8 +25,7 @@ export class TopicImageComponent extends TopicBaseComponent {
         if (this.content.src) {
             return [{
                 src: this.sanitizer.bypassSecurityTrustResourceUrl(this.content.src),
-                style: this.content.style,
-                type: this.content.type
+                class: this.content.class
             }];
         }
 
@@ -44,14 +43,12 @@ export class TopicImageComponent extends TopicBaseComponent {
 
         return {
             src: this.sanitizer.bypassSecurityTrustResourceUrl(item.src),
-            style: item.style,
-            type: item.type
+            class: item.class
         }
     }
 }
 
 class ImageDefinition {
     src: string | SafeResourceUrl;
-    style?: any;
-    type?: string;
+    class?: string;
 }

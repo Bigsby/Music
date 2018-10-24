@@ -24,10 +24,14 @@ export class TopicYouTubeComponent extends TopicBaseComponent {
             url = this.content.videoId;
         }
 
+        if (this.content.time){
+            url += "?start=" + this.content.time;
+        }
+
         return this.sanitizer.bypassSecurityTrustResourceUrl(this.youTubeBaseURL + url);
     }
 
-    get style(): any{
-        return this.content.style;
+    get class(): any{
+        return this.content.class;
     }
 }
