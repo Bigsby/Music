@@ -19,3 +19,4 @@
 # Libraries
 - [VexFlow](http://www.vexflow.com/)
   - Simile bar and harmony
+  - Measure rest
