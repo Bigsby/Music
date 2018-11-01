@@ -20,3 +20,4 @@
 - [VexFlow](http://www.vexflow.com/)
   - Simile bar and harmony
   - Measure rest
+- [VexUI](http://andrebakker.github.io/VexUI/)
